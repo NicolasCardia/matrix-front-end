@@ -21,16 +21,27 @@
       </table>
       <button @click="submitMatrix">Enviar Matriz</button>
     </div>
+
+    <Modal
+      :title="'Resultado'"
+      :message="'Área do maior retângulo: ' + result"
+      :visible="isModalVisible"
+      @close="isModalVisible = false"
+    />
   </div>
 </template>
 
 <script>
 import { buildMatrix } from "../controllers/MatrixController.js";
+import Modal from "./ModalComponent.vue";
 
 export default {
   name: 'MatrixForms',
   props: {
     msg: String,
+  },
+  components: {
+    Modal
   },
   data() {
     return {
@@ -38,6 +49,8 @@ export default {
       columns: 0,
       matrix: [],
       errorMessage: '',
+      result: 0,
+      isModalVisible: false
     };
   },
   methods: {
@@ -59,7 +72,8 @@ export default {
           body: JSON.stringify({ matrix: this.matrix })
         });
         const result = await response.json();
-        alert(`Área do maior retângulo: ${result}`);
+        this.result = result;
+        this.isModalVisible = true;
       } catch (error) {
         console.error('Erro ao enviar a matriz:', error);
         this.errorMessage = "Erro ao enviar a matriz. Por favor, tente novamente.";

@@ -1,17 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="logo Atech" src="./assets/Logo_Atech.png">
+  <Matrix />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Matrix from './components/Matrix.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Matrix,
+  },
+};
 </script>
 
 <style>
@@ -22,5 +22,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+
+img {
+  margin-bottom: 5%;
 }
 </style>

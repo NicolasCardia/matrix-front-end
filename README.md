@@ -16,5 +16,4 @@ npm run serve
 ```
 
 ## Considerações finais
-```
 Presumi e alinhei com o Marcelo Masahiko Miyake que caso a matriz iria começar com todos os valores zerados e implementei a chamada do back-end que calcula a ´área do retangulo em um botão e não automaticamente como pede no desafio, visto que facilitaria o controle de tratamentos de erros.

@@ -1,9 +1,7 @@
 # Atech Desafio encontrar a área do maior retângulo
 
 ## Desafio
-```
 Desenvolva um frontend que represente a matriz do exercício 1, usando o Vue.js. A página deve permitir que o usuário edite os valores da matriz, e o resultado seja automaticamente atualizado.
-```
 
 ## Comando para instalar dependências
 ```
